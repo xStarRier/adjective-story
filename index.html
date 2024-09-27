@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<style>
+
+.storyLine{
+    float:left;
+   margin-left: 6px;
+   font-family: sans-serif;
+}
+#blankDiv1{
+color: rgb(255, 135, 135);
+}
+#blankDiv2{
+color: rgb(255, 230, 0);  
+}
+#blankDiv3{
+color: rgb(0, 255, 157);     
+}
+#blankDiv4{
+color: rgb(121, 135, 255);  
+}
+
+</style>
+<div id="app"></div>
+<script>
+//MODEL
+var app = document.getElementById('app') 
+let coding = 'coding';
+let day = 'day';
+let but = 'but';
+let end = 'end';
+var html = /*HTML*/`
+
+
+ <div id="storyDiv1"class="storyLine">Today was a good </div>
+ <div id="blankDiv1"class="storyLine">_</div>
+ <div id="storyDiv2"class="storyLine">, Steph was</div>
+ <div id="blankDiv2"class="storyLine">_</div>
+ <div id="storyDiv3"class="storyLine" >and she was struggling</div>
+ <div id="blankDiv3"class="storyLine" >_</div>
+ <div id="storyDiv4"class="storyLine">she made it in the</div>
+ <div id="blankDiv4"class="storyLine">_</div>
+
+<br>
+<br>
+ <button onclick="endBtn()">End</button>
+ <button onclick="codingBtn()">Coding</button>
+ <button onclick="dayBtn()">Day</button>
+ <button onclick="butBtn()">But</button>
+ <button onclick="reset()">Reset</button>
+
+ `;
+//VIEW
+updateView()
+function updateView(){
+
+app.innerHTML = html;
+}
+
+//CONTROLLER
+function codingBtn(){
+document.getElementById("blankDiv2").innerHTML = 'coding';
+} 
+function dayBtn(){
+document.getElementById("blankDiv1").innerHTML = 'day';
+} 
+function butBtn(){
+document.getElementById("blankDiv3").innerHTML = 'but';
+} 
+function endBtn(){
+document.getElementById("blankDiv4").innerHTML = 'end';
+} 
+function reset(){
+location.reload()
+} 
+</script>
+
+
+
+</body>
+</html>
